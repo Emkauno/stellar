@@ -79,7 +79,7 @@ export default function Home() {
         <a
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
-          target="_blank"
+          target="_blank"  
           rel="noopener noreferrer"
         >
           <h2>
