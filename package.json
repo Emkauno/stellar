@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chec/commerce.js": "^2.8.0",
     "framer-motion": "^11.0.3",
     "next": "13.4.5",
     "react": "18.2.0",
