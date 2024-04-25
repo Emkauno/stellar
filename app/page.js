@@ -9,7 +9,7 @@ import Contact from '@/components/Contact'
 import { AnimatePresence } from "framer-motion";
 import commerce from "../lib/commerce"
 
-export default function Home(props) {
+function Home(props) {
   console.log(props)
   const { merchant, products } = props
   return (
@@ -24,7 +24,7 @@ export default function Home(props) {
   );
 }
 
-export async function getStaticProps() {
+Home.getStaticProps = async() => {
   const merchant = await commerce.merchants.about();
   const { data: products } = await commerce.products.list();
 
@@ -35,3 +35,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default Home
