@@ -56,7 +56,7 @@ export const ProductWindow = styled.div`
   position: relative;
   overflow: hidden;
   background: #FCFCF7;
-  font-family: 'Nunito Sans'
+  font-family: 'Nunito Sans';
   &::before{
     content: "";
     position: absolute;
