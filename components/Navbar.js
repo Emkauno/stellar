@@ -1,6 +1,14 @@
+import { FlexContainer } from "@/styles/FlexContainer"
+import { NavbarContainer, NavbarContent, NavbarTitle } from "@/styles/NavbarStyles"
+
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <NavbarContainer>
+      <NavbarContent>
+        <NavbarTitle>Stellar</NavbarTitle>
+        <p>chao</p>
+      </NavbarContent>
+    </NavbarContainer>
   )
 }
 

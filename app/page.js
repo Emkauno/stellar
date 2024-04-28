@@ -1,39 +1,38 @@
 'use client'
 
-import Image from "next/image";
+import { use } from 'react'
 import styles from "./page.module.css";
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Products from '@/components/Products'
 import Contact from '@/components/Contact'
 import { AnimatePresence } from "framer-motion";
-import commerce from "../lib/commerce"
+import Commerce from "@chec/commerce.js";
 
-function Home(props) {
-  console.log(props)
-  const { merchant, products } = props
+export default function Home() {
+
+  const commerce = new Commerce(process.env.NEXT_PUBLIC_CHEC_PUBLIC_KEY);
+
+  const getData = async () => {
+    try {
+      const data = await commerce.products.list();
+      return data
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const products = use(getData())
+
   return (
     <main className={styles.main}>
       <AnimatePresence>
       <Hero key="hero"/>
       <About key="about"/>
       <Products key="products" products={products}/>
-      <Contact key="contact"/>
+      <Contact/>
       </AnimatePresence>
     </main>
   );
 }
 
-Home.getStaticProps = async() => {
-  const merchant = await commerce.merchants.about();
-  const { data: products } = await commerce.products.list();
-
-  return {
-    props: {
-      merchant,
-      products,
-    },
-  };
-}
-
-export default Home

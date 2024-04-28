@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
 }
 
@@ -35,7 +34,6 @@
 }
 
 .code {
-  font-weight: 700;
   font-family: var(--font-mono);
 }
 
@@ -60,7 +58,6 @@
 }
 
 .card h2 {
-  font-weight: 600;
   margin-bottom: 0.7rem;
 }
 

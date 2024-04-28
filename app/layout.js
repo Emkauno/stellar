@@ -3,9 +3,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ContentWrapper, SiteWrapper } from "@/styles/Containers.styles";
 import StyledComponentsRegistry from "@/lib/registry";
-import { Inter } from 'next/font/google'
+import { Gothic_A1} from 'next/font/google'
 
-const inter = Inter({ subsets: ["latin"], display: 'swap' });
+const gothicA1 = Gothic_A1({subsets: ['latin'], display: 'swap', weight: ['300', '400', '700', '800']})
 
 export const metadata = {
   title: "Stellar Website",
@@ -14,12 +14,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>
+    <html lang="en" className={`${gothicA1.className}`}>
+      <body className={`${gothicA1.className}`}>
         <StyledComponentsRegistry>
           <SiteWrapper>
+          <Navbar />
             <ContentWrapper>
-              <Navbar />
               {children}
               <Footer />
             </ContentWrapper>

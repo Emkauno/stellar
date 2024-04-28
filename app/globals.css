@@ -38,6 +38,8 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+  --primary-color: rgb(34,34,34);
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -77,6 +79,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: var(--primary-color);
+  outline: 1px solid red;
 }
 
 html,
@@ -87,12 +91,6 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 a {

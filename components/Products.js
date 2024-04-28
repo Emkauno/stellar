@@ -1,20 +1,41 @@
-import Link from 'next/link';
-import ProductItem from './ProductItem';
+import Link from "next/link";
+import ProductItem from "./ProductItem";
+import { FlexContainer } from "@/styles/FlexContainer";
+import { Splide, SplideSlide } from "splide-nextjs/react-splide";
+import "splide-nextjs/splide/dist/css/themes/splide-default.min.css";
 
 const Products = ({ products }) => {
+  const { data } = products;
   return (
-    <div className="products" id="products">
-    {products?.map((product) => (
-        <Link href={`/product/${product.permalink}`} key={product.id}>
-            <a>
-              <ProductItem
-                product={product}
-           />
-         </a>
-      </Link>
-    ))}
-</div>
-  )
-}
+    <FlexContainer $width="100%" $maxWidth="1200px" $minHeight="350px">
+      <Splide   options={{
+        rewind: true,
+        gap   : '1rem',
+        perPage: 4,
+        type: 'loop',
+        perMove: 1,
+        width: '90vw',
+        fixedWidth: '200px',
+        fixedHeight: '250px',
+        breakpoints: {
+          900: {
+            perPage: 3
+          },
+          600: {
+            perPage:2
+          }
+        }
+      } }>
+        {data?.map((product) => (
+          <SplideSlide key={product.id}>
+            {/* <Link href={`/product/${product.permalink}`} key={product.id}> */}
+              <ProductItem product={product} />
+            {/* </Link> */}
+          </SplideSlide>
+        ))}
+      </Splide>
+    </FlexContainer>
+  );
+};
 
-export default Products
+export default Products;

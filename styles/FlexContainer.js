@@ -16,6 +16,10 @@ export const FlexContainer = styled(motion.div)`
   gap: ${props => props.$gap || "0"};
   margin-top: ${props => props.$firstSection ? "32px" : "0"};
   min-height: ${props => props.$minHeight || 'unset'};
+  position: ${props => props.$position || 'relative'};
+  overflow: ${props => props.$overflow || 'unset'};
+  margin: ${props => props.$margin};
+ 
   @media(max-width: 900px){
     flex-direction: column;
     width: 100%;
@@ -27,6 +31,20 @@ export const FlexContainer = styled(motion.div)`
   @media(max-width: 500px){
         padding: ${props => props.$padding || "0"};
 
+  }
+  .splide {
+    width: 100%;
+  }
+  .splide__pagination {
+    bottom: -30px;
+  }
+
+  .logo-navbar {
+    filter: brightness(11);
+  }
+
+  img {
+    width: fit-content;
   }
 
   .logo {
