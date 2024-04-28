@@ -24,13 +24,9 @@ export const FlexContainer = styled(motion.div)`
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-    padding: ${props => props.$padding || "0 12px"};
+      padding: ${props => props.$padding || "0 20px"};
     margin-top: ${props => props.$firstSection ? "24px" : "0"};
     gap: ${props => props.$gap ? props.$gap : "48px"};
-  }
-  @media(max-width: 500px){
-        padding: ${props => props.$padding || "0"};
-
   }
   .splide {
     width: 100%;

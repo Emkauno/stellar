@@ -26,12 +26,10 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <AnimatePresence>
-      <Hero key="hero"/>
-      <About key="about"/>
-      <Products key="products" products={products}/>
-      <Contact/>
-      </AnimatePresence>
+        <Hero key="hero"/>
+        <About key="about"/>
+        <Products key="products" products={products}/>
+        <Contact/>
     </main>
   );
 }
