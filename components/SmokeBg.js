@@ -16,7 +16,8 @@ const SmokeBg = () => {
   useEffect(() => {
     if(typeof window !== 'undefined') {
       let w = window.innerWidth
-      let h = window.innerHeight
+      h = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
 
       const scene = new THREE.Scene()
       const camera = new THREE.PerspectiveCamera(75, w / h, 1, 1000)
@@ -63,8 +64,10 @@ const SmokeBg = () => {
       }
       
       const resize = () => {
-        h = window.innerHeight
+        let h = window.innerHeight * 0.01;
         w = window.innerWidth
+        
+        document.documentElement.style.setProperty('--h', `${h}px`);
         console.log("resize")
 
         camera.aspect = w / h
