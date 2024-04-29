@@ -5,7 +5,7 @@ export const SmokeContainer = styled.div`
   height: 100vh;
   position: fixed;
   z-index: -3;
-  opacity: 0.25;
+  opacity: 0.4;
   filter: invert(1);
 `
 export const WhiteBg = styled.div`
