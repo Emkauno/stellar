@@ -194,7 +194,7 @@ export const MbBackground = styled(motion.div)`
   top: 0;
   height: 100%;
   background:url('/leaf.avif');
-  -webkit-mask-image: linear-gradient(transparent, rgba(255,255,255,.3), transparent);
+  -webkit-mask-image: linear-gradient(transparent, rgba(255,255,255,.5), transparent);
   background-size: cover;
   background-position: top;
   z-index: -2;
