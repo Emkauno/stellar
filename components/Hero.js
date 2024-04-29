@@ -12,11 +12,11 @@ const Hero = () => {
   });
 
   const lg = useTransform(scrollYProgress, [0, 3.5], [0, 400]);
-  const sm = useTransform(scrollYProgress, [0, 1.8], [-200, 750]);
+  const sm = useTransform(scrollYProgress, [0, 1.8], [-100, 750]);
 
   return (
     <>
-        {/* <MbBackground /> */}
+        <MbBackground />
         <FlexContainer
       $firstSection={true}
       $overflow="hidden"
