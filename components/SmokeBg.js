@@ -63,10 +63,9 @@ const SmokeBg = () => {
       }
       
       const resize = () => {
-        h = window.innerHeight * 0.01;
+        h = window.innerHeight
         w = window.innerWidth
-
-        document.documentElement.style.setProperty('--vh', `${h}px`);
+        console.log("resize")
 
         camera.aspect = w / h
         camera.updateProjectionMatrix()
