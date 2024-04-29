@@ -12,20 +12,22 @@ export const FlexContainer = styled(motion.div)`
   flex-direction: ${props => props.$direction || 'row'};
   background: ${props => props.$background || "transparent"};
   max-width: ${props => props.$maxWidth || "100%"};
-  color: ${props => props.$color || "var(--primaryColor)"};
+  color: ${props => props.$color || "#FCFCF7"};
   gap: ${props => props.$gap || "0"};
   margin-top: ${props => props.$firstSection ? "64px" : "0"};
   min-height: ${props => props.$minHeight || 'unset'};
   position: ${props => props.$position || 'relative'};
   overflow: ${props => props.$overflow || 'unset'};
   margin: ${props => props.$margin};
+  margin-bottom: ${props => props.$marginBottom && props.$marginBottom};
  
   @media(max-width: 900px){
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-      padding: ${props => props.$padding || "0 20px"};
+    padding: ${props => props.$padding || "0 20px"};
     margin-top: ${props => props.$firstSection ? "24px" : "0"};
+    margin-bottom: ${props => props.$marginBottom && props.$marginBottom};
     gap: ${props => props.$gap ? props.$gap : "48px"};
   }
   .splide {

@@ -3,21 +3,23 @@ import ProductItem from "./ProductItem";
 import { FlexContainer } from "@/styles/FlexContainer";
 import { Splide, SplideSlide } from "splide-nextjs/react-splide";
 import "splide-nextjs/splide/dist/css/themes/splide-default.min.css";
+import { ProductsContainer } from "@/styles/ProductsStyles";
 
 const Products = ({ products }) => {
   const { data } = products;
   return (
-    <FlexContainer $direction="column" $padding="64px 20px" $width="100%" $maxWidth="1200px" $minHeight="350px">
+    <ProductsContainer $direction="column" $width="100%" $gap="32px" $maxWidth="1200px" $minHeight="350px">
       <h2 className="products-header">Productos</h2>
       <Splide   options={{
         rewind: true,
-        gap   : '1rem',
-        perPage: 4,
+        gap   : '5px',
         type: 'loop',
         perMove: 1,
         width: '90vw',
-        fixedWidth: '200px',
-        fixedHeight: '250px',
+        fixedWidth: '250px',
+        fixedHeight: '300px',
+        perPage: 4,
+        focus: 'center',
         breakpoints: {
           900: {
             perPage: 3
@@ -35,7 +37,7 @@ const Products = ({ products }) => {
           </SplideSlide>
         ))}
       </Splide>
-    </FlexContainer>
+    </ProductsContainer>
   );
 };
 

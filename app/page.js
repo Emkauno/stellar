@@ -1,6 +1,6 @@
 "use client";
 
-import { use } from "react";
+import { use, useState } from "react";
 import styles from "./page.module.css";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -12,6 +12,7 @@ import SmokeBg from "@/components/SmokeBg";
 import WhiteBackground from "@/components/WhiteBackground";
 
 export default function Home() {
+  const [smokeBackground, setSmokeBackground] = useState(false)
   const commerce = new Commerce(process.env.NEXT_PUBLIC_CHEC_PUBLIC_KEY);
 
   const getData = async () => {
@@ -29,7 +30,7 @@ export default function Home() {
     <>
       {products ? (
         <main className={styles.main}>
-          <SmokeBg/>
+          <SmokeBg key="background"/>
           <Hero key="hero" />
           <About key="about" />
           <Products key="products" products={products} />

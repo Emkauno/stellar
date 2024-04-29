@@ -1,11 +1,13 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const SmokeContainer = styled.div`
+export const SmokeContainer = styled(motion.div)`
   width: 100vw;
   height: 100vh;
   position: fixed;
   z-index: -3;
-  opacity: 0.4;
+  opacity: ${({$background}) => $background === true ? ".6" : "0"};
+  transition: opacity 2s ease;
   filter: invert(1);
   @media(max-width: 500px){
     display: none;

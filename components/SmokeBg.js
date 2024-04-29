@@ -1,31 +1,23 @@
 import { SmokeContainer } from '@/styles/SmokeBgStyles';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import * as THREE from 'three';
 
 const SmokeBg = () => {
   const containerRef = useRef(null);
-
-  const geometry = new THREE.BoxGeometry(1,1,1)
-  const material = new THREE.MeshBasicMaterial({
-    color: 0x0099ff
-  })
-  const cube = new THREE.Mesh(geometry, material)
-
-
-
+  const [ background, setBackground ] = useState(false)
   useEffect(() => {
     if(typeof window !== 'undefined') {
       let w = window.innerWidth
       let h = window.innerHeight
 
       const scene = new THREE.Scene()
-      const camera = new THREE.PerspectiveCamera(75, w / h, 1, 1000)
+      const camera = new THREE.PerspectiveCamera(80, w / h, 1, 100)
       camera.position.z = 10
       scene.add(camera)
 
       const renderer = new THREE.WebGLRenderer()
       renderer.setSize(w, h)
-      renderer.setClearColor(0xEEEEEE, 1)
+      renderer.setClearColor(0xFFFFFF, 1)
       containerRef.current?.appendChild(renderer.domElement);
 
       const smokeParticles = []
@@ -34,6 +26,7 @@ const SmokeBg = () => {
       loader.crossOrigin = ''
 
       loader.load('/smoke.png', (texture) => {
+        setBackground(true)
         const smokeGeo = new THREE.PlaneGeometry(300,300)
         const smokeMaterial = new THREE.MeshLambertMaterial({
           map: texture,
@@ -44,8 +37,8 @@ const SmokeBg = () => {
           const particle = new THREE.Mesh(smokeGeo, smokeMaterial)
           particle.position.set(
             Math.random() * 500 - 250,
-            Math.random() * 500 - 250,
-            Math.random() * 1000 - 100,
+            Math.random() * 500 - 150,
+            Math.random() * 400 - 50,
           )
           particle.rotation.z = Math.random() * 360
           scene.add(particle)
@@ -65,8 +58,6 @@ const SmokeBg = () => {
       const resize = () => {
         h = window.innerHeight
         w = window.innerWidth
-        console.log("resize")
-
         camera.aspect = w / h
         camera.updateProjectionMatrix()
         renderer.setSize(w,h)
@@ -74,13 +65,12 @@ const SmokeBg = () => {
       
       animate()
       window.addEventListener('resize', resize)
-
     }
     
   }, []);
 
 
-  return <SmokeContainer ref={containerRef} />;
+  return <SmokeContainer $background={background} ref={containerRef} />;
 };
 
 export default SmokeBg;
