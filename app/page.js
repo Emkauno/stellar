@@ -1,36 +1,40 @@
-'use client'
+"use client";
 
-import { use } from 'react'
+import { use } from "react";
 import styles from "./page.module.css";
-import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Products from '@/components/Products'
-import Contact from '@/components/Contact'
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Products from "@/components/Products";
+import Contact from "@/components/Contact";
 import { AnimatePresence } from "framer-motion";
 import Commerce from "@chec/commerce.js";
+import SmokeBg from "@/components/SmokeBg";
 
 export default function Home() {
-
   const commerce = new Commerce(process.env.NEXT_PUBLIC_CHEC_PUBLIC_KEY);
 
   const getData = async () => {
     try {
       const data = await commerce.products.list();
-      return data
+      return data;
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
-  const products = use(getData())
+  const products = use(getData());
 
   return (
-    <main className={styles.main}>
-        <Hero key="hero"/>
-        <About key="about"/>
-        <Products key="products" products={products}/>
-        <Contact/>
-    </main>
+    <>
+      {products ? (
+        <main className={styles.main}>
+          <SmokeBg/>
+          <Hero key="hero" />
+          <About key="about" />
+          <Products key="products" products={products} />
+          <Contact />
+        </main>
+      ) : null}
+    </>
   );
 }
-

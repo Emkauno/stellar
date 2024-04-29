@@ -40,11 +40,30 @@ export const FlexContainer = styled(motion.div)`
   }
 
   img {
-    width: fit-content;
+    width: 100%;
   }
 
   .logo {
     width: 120px;
+  }
+
+  h2 {
+    &.products-header {
+      color: #fcfcf7;
+      background: rgb(34,34,34);
+      font-size: 45px;
+      margin-bottom: 32px;
+      padding: 8px 16px;
+      font-weight: 200;
+      text-transform: uppercase;
+      @media(max-width: 750px){
+        font-size: 5vw;
+        margin-bottom: 0;
+      }
+      @media(max-width: 500px){
+        font-size: 8vw;
+      }
+    }
   }
   h1 {
     color: var(--primaryColor);

@@ -1,8 +1,9 @@
 import { useRef } from "react";
-import { HeroTitle, MbBackground } from "@/styles/HeroStyles";
+import { HeroTitle, MbBackground, Gradient } from "@/styles/HeroStyles";
 import { useScroll, useTransform } from "framer-motion";
 import { FlexContainer } from "@/styles/FlexContainer";
 import HeroImages from "./HeroImages";
+
 const Hero = () => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -11,11 +12,11 @@ const Hero = () => {
   });
 
   const lg = useTransform(scrollYProgress, [0, 3.5], [0, 400]);
-  const sm = useTransform(scrollYProgress, [0, 1.5], [400, -200]);
+  const sm = useTransform(scrollYProgress, [0, 1.8], [-200, 750]);
 
   return (
     <>
-        <MbBackground />
+        {/* <MbBackground /> */}
         <FlexContainer
       $firstSection={true}
       $overflow="hidden"
@@ -29,6 +30,7 @@ const Hero = () => {
       transition={{ duration: 0.3 }}
       $gap="32px"
     >
+      <Gradient/>
       <FlexContainer $padding="0" key="HeroLabel" $minHeight="200px">
         <HeroTitle>
           <h1>

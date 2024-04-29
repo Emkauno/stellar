@@ -7,7 +7,8 @@ import "splide-nextjs/splide/dist/css/themes/splide-default.min.css";
 const Products = ({ products }) => {
   const { data } = products;
   return (
-    <FlexContainer $width="100%" $maxWidth="1200px" $minHeight="350px">
+    <FlexContainer $direction="column" $padding="64px 20px" $width="100%" $maxWidth="1200px" $minHeight="350px">
+      <h2 className="products-header">Productos</h2>
       <Splide   options={{
         rewind: true,
         gap   : '1rem',

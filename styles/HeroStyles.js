@@ -89,7 +89,7 @@ export const HeroTitle = styled(motion.div)`
       display: flex;
       width: unset;
       color: #fcfcf7;
-      background: rgba(34, 34, 34);
+      background: rgb(34,34,34);
       padding: 4px 8px;
       line-height: 20px;
       @media (max-width: 780px) {
@@ -114,6 +114,15 @@ export const HeroTitle = styled(motion.div)`
     }
   }
 `;
+
+export const Gradient = styled(motion.div)`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 2;
+`
 
 export const HeroImagesContainer = styled(motion.div)`
   width: 100%;
@@ -147,9 +156,9 @@ export const HeroImageHolder = styled(motion.div)`
     box-shadow: rgba(0, 17, 51, 0.1) 0px 3px 15px 0px;
   }
   &:first-child {
-    transform: rotate(-10deg) translateX(30px) translateY(20px);
+    transform: translateX(30px) translateY(20px);
     @media (max-width: 700px) {
-      transform: rotate(0deg) translateX(0px) translateY(0px);
+      transform: translateX(0px) translateY(0px);
       height: 200px;
     }
     @media (max-width: 400px) {
@@ -168,9 +177,9 @@ export const HeroImageHolder = styled(motion.div)`
     }
   }
   &:last-child {
-    transform: rotate(10deg) translateX(-30px) translateY(20px);
+    transform: translateX(-30px) translateY(20px);
     @media (max-width: 700px) {
-      transform: rotate(0deg) translateX(0px) translateY(0px);
+      transform:translateX(0px) translateY(0px);
       height: 200px;
     }
     @media (max-width: 400px) {
@@ -189,4 +198,5 @@ export const MbBackground = styled(motion.div)`
   background-size: cover;
   background-position: top;
   z-index: -2;
+  opacity: 1;
 `
