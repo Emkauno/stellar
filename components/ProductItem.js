@@ -16,7 +16,7 @@ const ProductItem = ({ product }) => {
 			</ProductWindow>
 			<h3>{product.name}</h3>
 			<p>{CLPeso.format(product?.price?.raw)}</p>
-		</ProductCard>
+		</ProductCard> 
 
   );
 };
