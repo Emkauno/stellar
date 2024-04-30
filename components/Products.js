@@ -8,7 +8,7 @@ import { ProductsContainer } from "@/styles/ProductsStyles";
 const Products = ({ products }) => {
   const { data } = products;
   return (
-    <ProductsContainer $direction="column" $width="100%" $gap="32px" $maxWidth="1200px" $minHeight="350px">
+    <ProductsContainer $direction="column" $width="100%" $gap="32px" $maxWidth="1200px" $minHeight="350px"  key="products"  initial={{opacity: 0, y: -20}} animate={{opacity: 1, y: 0}}>
       <h2 className="products-header">Productos</h2>
       <Splide   options={{
         rewind: true,

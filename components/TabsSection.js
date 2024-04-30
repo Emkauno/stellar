@@ -58,7 +58,7 @@ const TabsSection = () => {
         <AnimatePresence initial={false} mode="wait">
           {items.map(
             (item, i) =>
-              activeTab === `tab-${i + 1}` && (
+              activeTab === `tab-${i + 2}` && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}

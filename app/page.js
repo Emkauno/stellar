@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import Commerce from "@chec/commerce.js";
 import SmokeBg from "@/components/SmokeBg";
 import WhiteBackground from "@/components/WhiteBackground";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const commerce = new Commerce(process.env.NEXT_PUBLIC_CHEC_PUBLIC_KEY);
@@ -27,16 +28,15 @@ export default function Home() {
     getData()
   }, [])
   
-console.log(products)
   return (
     <>
       {products ? (
         <main className={styles.main}>
-          <SmokeBg key="background"/>
-          <Hero key="hero" />
-          <About key="about" />
-          <Products key="products" products={products} />
-          <Contact />
+          <SmokeBg/>
+          <Hero/>
+          <About/>
+          <Products products={products} />
+          <Contact/>
           <WhiteBackground/>
         </main>
       ) : null}

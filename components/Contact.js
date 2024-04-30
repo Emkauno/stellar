@@ -3,7 +3,7 @@ import { ContactContainer } from "@/styles/ContactStyles";
 
 const Contact = () => {
   return (
-    <FlexContainer $marginBottom="64px" $firstSection $direction="column" $background="rgba(34,34,34)">
+    <FlexContainer $marginBottom="64px" $firstSection $direction="column" $background="rgba(34,34,34)"  key="contact" initial={{opacity: 0, y: -20}} animate={{opacity: 1, y: 0}}>
       <ContactContainer>
         <h2>Conversemos</h2>
         <p>
