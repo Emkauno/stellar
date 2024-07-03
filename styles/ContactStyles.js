@@ -21,6 +21,9 @@ export const ContactContainer = styled.div`
     color: white;
     font-size: 16px;
     text-align: center;
+    @media(max-width: 768px){
+    max-width: 100vw;
+  }
     @media(max-width: 500px){
       text-align: left;
     }
@@ -37,9 +40,18 @@ export const ContactContainer = styled.div`
     font-size: 18px;
     transform: scale(1);
     transition: all .3s ease;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
     &:hover {
       cursor: pointer;
       transform: scale(1.12);
+    }
+    img {
+      width: 24px;
     }
   }
 `

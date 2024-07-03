@@ -1,5 +1,6 @@
 import { FlexContainer } from "@/styles/FlexContainer";
 import { ContactContainer } from "@/styles/ContactStyles";
+import Image from "next/image";
 
 const Contact = () => {
   return (
@@ -9,7 +10,10 @@ const Contact = () => {
         <p>
         ¿Tienes preguntas, comentarios o necesitas asesoramiento? ¡Estamos aquí para ayudarte en todo lo que necesites! No dudes en contactarnos a través de WhatsApp para recibir una atención personalizada y resolver cualquier inquietud que tengas.
         </p>
-        <button>Contactar Ahora</button>
+        <button>Contactar Ahora 
+    <Image src="/whatsapp.png" width={24} height={24}/>
+
+        </button>
       </ContactContainer>
     </FlexContainer>
   );

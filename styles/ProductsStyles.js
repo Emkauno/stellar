@@ -35,7 +35,10 @@ export const ProductsContainer = styled(motion.div)`
     
   }
   .splide__pagination {
-    bottom: -30px;
+    bottom: -50px;
+    @media(max-width: 900px){
+      bottom: -30px;
+    }
   }
   .splide__pagination__page.is-active {
     background: rgb(34,34,34);
@@ -61,12 +64,13 @@ export const ProductsContainer = styled(motion.div)`
       width: 100%
     }
     @media(max-width: 1300px){
-      transform: translateX(-20px) translateY(-55%) scale(2);
+      transform: translateX(-40px) translateY(-55%) scale(2);
       &:hover {
-      transform: translateX(-20px) translateY(-55%) scale(2);
+      transform: translateX(-40px) translateY(-55%) scale(2);
       }
     }
-    @media(max-width: 500px){
+    
+    @media(max-width: 768px){
       background: #fcfcf7;
       opacity: 1;
       border: 1px solid rgba(0,0,0,.2);
@@ -92,12 +96,12 @@ export const ProductsContainer = styled(motion.div)`
       width: 100%;
     }
     @media(max-width: 1300px){
-      transform: translateX(20px) translateY(-55%) scale(2);
+      transform: translateX(40px) translateY(-55%) scale(2);
       &:hover {
-      transform: translateX(20px) translateY(-55%) scale(2);
+      transform: translateX(40px) translateY(-55%) scale(2);
       }
     }
-    @media(max-width: 500px){
+    @media(max-width: 768px){
       background: #fcfcf7;
       opacity: 1;
       border: 1px solid rgba(0,0,0,.2);

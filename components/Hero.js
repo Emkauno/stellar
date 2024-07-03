@@ -35,9 +35,9 @@ const Hero = () => {
         <HeroTitle>
           <h1>
             <span>
-              Impulsa el <span className="bold">Progreso</span>
+              PRODUCTOS FINOS Y DISTINTOS
             </span>
-            <span>Desata el potencial</span>
+            <span>PARA LOS <span className="bold">CULTIVADORES</span> Y LA <span className="bold">CULTURA</span></span>
           </h1>
           <span className="kicker">Eleva tu Cultivo, cosecha excelencia</span>
         </HeroTitle>

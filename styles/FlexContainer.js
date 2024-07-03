@@ -24,7 +24,7 @@ export const FlexContainer = styled(motion.div)`
   @media(max-width: 900px){
     flex-direction: column;
     width: 100%;
-    max-width: 100%;
+    max-width: 100vw;
     padding: ${props => props.$padding || "0 20px"};
     margin-top: ${props => props.$firstSection ? "24px" : "0"};
     margin-bottom: ${props => props.$marginBottom && props.$marginBottom};
@@ -33,10 +33,6 @@ export const FlexContainer = styled(motion.div)`
   .splide {
     width: 100%;
   }
-  .splide__pagination {
-    bottom: -30px;
-  }
-
   .logo-navbar {
     filter: brightness(11);
   }

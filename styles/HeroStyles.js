@@ -23,7 +23,7 @@ export const HeroTitle = styled(motion.div)`
     }
     @media (max-width: 500px) {
       span:nth-child(2) {
-        font-size: 7.8vw;
+        font-size: 30px;
         text-align: center;
       }
     }
@@ -31,22 +31,23 @@ export const HeroTitle = styled(motion.div)`
   span {
     width: 100%;
     font-weight: 200;
-    font-size: 80px;
-    text-align: left;
+    font-size: 65px;
+    text-align: center;
     display: block;
+    line-height: 120%;
     @media (max-width: 1000px) {
-      font-size: 60px;
+      font-size: 50px;
     }
 
     @media (max-width: 750px) {
-      font-size: 75px;
+      font-size: 50px;
     }
   
 
     @media (max-width: 750px) {
       text-align: center;
       width: 100%;
-      line-height: 75px;
+      line-height: 52px;
       &:first-child {
         display: flex;
         flex-direction: column;
@@ -58,32 +59,26 @@ export const HeroTitle = styled(motion.div)`
       }
     }
     @media (max-width: 500px) {
-      font-size: 60px;
-      line-height: 60px;
+      font-size: 40px;
+      line-height: 40px;
     }
     @media (max-width: 480px) {
-      font-size: 15vw;
-      line-height: 15vw;
+      font-size: 50px;
+      line-height: 50px;
     }
-    &:last-child {
-      text-align: right;
-    }
+
     &.bold {
       font-weight: 800;
       display: inline;
       @media(max-width: 750px){
-        text-decoration: underline;
+        text-decoration: none;
         text-underline-offset: 15px;
       }
       @media(max-width: 500px){
-        text-decoration: underline;
         text-underline-offset: 10px;
       }
     }
     &.kicker {
-      position: absolute;
-      right: 0;
-      bottom: -24px;
       font-size: 16px;
       font-weight: 800;
       display: flex;
@@ -92,6 +87,7 @@ export const HeroTitle = styled(motion.div)`
       background: rgb(34,34,34);
       padding: 4px 8px;
       line-height: 20px;
+      margin-top: 20px;
       @media (max-width: 780px) {
         position: relative;
         font-size: 14px;
@@ -193,7 +189,7 @@ export const MbBackground = styled(motion.div)`
   position: absolute;
   top: 0;
   height: 100%;
-  background:url('/leaf.avif');
+  background:url('/background.jpg');
   -webkit-mask-image: linear-gradient(transparent, rgba(255,255,255,.5), transparent);
   background-size: cover;
   background-position: top;

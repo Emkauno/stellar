@@ -5,13 +5,13 @@ const HeroImages = () => {
   return (
     <HeroImagesContainer>
       <HeroImageHolder>
-        <Image src="/bud.avif" alt="hero-image-one" fill/>
+        <Image src="/vape.jpg" alt="hero-image-one" fill/>
       </HeroImageHolder>
       <HeroImageHolder>
-        <Image src="/leaf.avif" alt="hero-image-one" fill/>
+        <Image src="/greenhouse.jpg" alt="hero-image-one" fill/>
       </HeroImageHolder>
       <HeroImageHolder>
-        <Image src="/budone.avif" alt="hero-image-one" fill/>
+        <Image src="/pipe.jpg" alt="hero-image-one" fill/>
       </HeroImageHolder>
     </HeroImagesContainer>
   )

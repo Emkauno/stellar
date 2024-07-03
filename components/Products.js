@@ -19,7 +19,6 @@ const Products = ({ products }) => {
         fixedWidth: '250px',
         fixedHeight: '300px',
         perPage: 4,
-        focus: 'center',
         breakpoints: {
           900: {
             perPage: 3

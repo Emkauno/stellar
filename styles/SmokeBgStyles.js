@@ -6,7 +6,7 @@ export const SmokeContainer = styled(motion.div)`
   height: 100vh;
   position: fixed;
   z-index: -3;
-  opacity: ${({$background}) => $background === true ? ".6" : "0"};
+  opacity: ${({$background}) => $background === true ? ".3" : "0"};
   transition: opacity 2s ease;
   filter: invert(1);
   @media(max-width: 500px){
