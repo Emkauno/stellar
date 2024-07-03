@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { HeroTitle, MbBackground, Gradient } from "@/styles/HeroStyles";
 import { useScroll, useTransform } from "framer-motion";
 import { FlexContainer } from "@/styles/FlexContainer";
@@ -11,8 +11,11 @@ const Hero = () => {
     offset: ["start end", "end start"],
   });
 
+  const [coordinates, setCoordinates] = useState({firstValue: -1, secondValue: 5, thirdValue: -100, fourthValue: 700})
+
   const lg = useTransform(scrollYProgress, [0, 3.5], [0, 400]);
-  const sm = useTransform(scrollYProgress, [0, 1.8], [-100, 750]);
+  const sm = useTransform(scrollYProgress, [coordinates?.firstValue, coordinates.secondValue], [coordinates.thirdValue, coordinates.fourthValue]);
+
 
   return (
     <>

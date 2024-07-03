@@ -13,6 +13,9 @@ export const HeroTitle = styled(motion.div)`
     @media (max-width: 750px) {
       margin-top: 0;
     }
+    @media (max-width: 750px) {
+      margin-top: 100px;
+    }
   h1 {
     width: 100%;
     @media (max-width: 750px) {
@@ -133,7 +136,10 @@ export const HeroImagesContainer = styled(motion.div)`
   position: relative;
   @media (max-width: 750px) {
     flex-direction: column;
-    display: none;
+    transform: translateY(-125px);
+  }
+  @media (max-width: 450px) {
+    transform: translateY(-100px);
   }
 `;
 
@@ -142,13 +148,15 @@ export const HeroImageHolder = styled(motion.div)`
   position: relative;
   width: 32%;
   min-height: 600px;
-
   @media (max-width: 700px) {
     width: 100%;
     min-height: unset;
     &:not(:last-child){
       margin-bottom: 10px;
     }
+  }
+  @media (max-width: 400px) {
+      max-height: 140px;
   }
   img {
     filter: contrast(1.2);
@@ -160,9 +168,6 @@ export const HeroImageHolder = styled(motion.div)`
     @media (max-width: 700px) {
       transform: translateX(0px) translateY(0px);
       height: 200px;
-    }
-    @media (max-width: 400px) {
-   
     }
   }
   &:nth-child(2) {
