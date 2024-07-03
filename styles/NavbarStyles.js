@@ -36,6 +36,9 @@ export const NavbarTitle = styled.span`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media(max-width: 500px){
+    justify-content: center;
+  }
   img {
     position: relative;
   }
