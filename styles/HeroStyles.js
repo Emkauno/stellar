@@ -66,6 +66,10 @@ export const HeroTitle = styled(motion.div)`
       font-size: 50px;
       line-height: 50px;
     }
+    @media (max-width: 400px) {
+      font-size: 40px;
+      line-height: 50px;
+    }
 
     &.bold {
       font-weight: 800;
