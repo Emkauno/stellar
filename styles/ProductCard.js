@@ -8,7 +8,7 @@ export const ProductCard = styled(motion.div)`
   width: 100%;
   height: 100%;
   padding: 12px;
-  min-height: 250px;
+  min-height: 330px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -18,7 +18,6 @@ export const ProductCard = styled(motion.div)`
   box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px 0px;
   cursor: pointer;
  
-
   img {
     object-fit: contain;
     z-index: 0;
@@ -56,6 +55,9 @@ export const ProductCard = styled(motion.div)`
     img {
       width: 80%;
     }
+  }
+  @media(max-width: 500px){
+    min-height: 300px;
   }
 `
 
