@@ -156,3 +156,149 @@ export const ProductsContainer = styled(motion.div)`
     width: 100%
   }
 `
+
+export const ModalContainer = styled(motion.div)`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  padding: 80px;
+  @media(max-width: 500px){
+    width: 100%;
+    padding: 0;
+  }
+`
+
+export const Modal = styled.div`
+  padding: 32px;
+  border-radius: 24px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-top: 80px;
+  position: relative;
+  @media(max-width: 500px){
+    border-radius: 0;
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    color: white;
+    background: rgb(34, 34, 34);
+    text-align: left;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  span {
+    font-size: 20px;
+    font-weight: 800;
+    width: 100%;
+    color: rgb(34,34,34)
+  }
+  .close-btn {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+`
+
+export const ModalInfo = styled(motion.div)`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  @media(max-width: 768px){
+    flex-direction: column;
+  }
+  .img-container {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+    @media(max-width: 768px){
+      img {
+        width: 200px;
+      }
+    }
+  }
+  
+  .item-details {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    span {
+      padding-bottom: 12px;
+      border-bottom: 1px solid #ccc;
+    }
+    .item-text {
+      margin-top: -12px;
+      max-height: 400px;
+      overflow-y: auto;
+      ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    border: 3px solid transparent; /* creates space around the thumb */
+    background-clip: padding-box; /* keeps the thumb rounded within its space */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  /* Style for Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
+
+  &:hover {
+    /* Only show scrollbar when hovering */
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  /* Optional - Smooth scrolling */
+  -webkit-overflow-scrolling: touch;
+
+    }
+    @media(max-width: 500px){
+    height: 380px;
+  }
+  }
+`

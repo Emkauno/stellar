@@ -12,7 +12,7 @@ import WhiteBackground from "@/components/WhiteBackground";
 import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
-  const commerce = new Commerce(process.env.NEXT_PUBLIC_CHEC_PUBLIC_KEY);
+  const commerce = new Commerce("pk_569435ccc4565a0924d2d8248a06c1e5d1a7ea284e380");
   const [ products, setProducts ] = useState([])
 
   const getData = async () => {

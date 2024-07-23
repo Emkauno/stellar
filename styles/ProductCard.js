@@ -17,11 +17,8 @@ export const ProductCard = styled(motion.div)`
   overflow: hidden;
   box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px 0px;
   cursor: pointer;
-  &:hover {
-      ::before{
-        transform: scale(.9);
-    }
-  }
+ 
+
   img {
     object-fit: contain;
     z-index: 0;
@@ -54,31 +51,29 @@ export const ProductCard = styled(motion.div)`
     bottom: 12px;
     left: 12px;
   }
+  &:hover {
+
+    img {
+      width: 80%;
+    }
+  }
 `
 
 export const ProductWindow = styled.div`
   width: 100%;
-  height: 150px;  
+  height: 200px;  
   aspect-ratio: 1/1;
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: center;
-  position: relative;
   overflow: hidden;
-  background: #FCFCF7;
+  background: white;
   font-family: 'Nunito Sans';
-  &::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0; 
-    left: 0;
-    background: ${({$image}) => `url(${$image})` || "red"}, #FCFCF7;
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: scale(.8);
-    transition: all .3s ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 70%;
+  }
+  @media(max-width: 768px){
+    height: 150px;
   }
 `
