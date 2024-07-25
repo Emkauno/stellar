@@ -15,7 +15,7 @@ const Contact = () => {
 
         </p>
         <a href="https://wa.me/56983269643?text=Hola,%20me%20interesa%20un%20producto%20de%20Stellar%20Tienda">Contactar Ahora
-          <Image src="/whatsapp.png" width={24} height={24} />
+          <Image src="/whatsapp.svg" width={24} height={24} />
         </a>
       </ContactContainer>
     </FlexContainer>

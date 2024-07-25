@@ -24,7 +24,7 @@ const Footer = () => {
             ventas@stellartienda.cl
           </FooterInfo>
           <FooterInfo>
-            <Image src="/whatsapp.png" width={18} height={18} />
+            <Image src="/whatsapp.svg" width={15} height={15} />
             +56 9 8326 9643
           </FooterInfo>
         </FooterColumn>
