@@ -6,7 +6,7 @@ export const FooterContainer = styled(motion.div)`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   position: sticky;
   bottom: 0;
@@ -45,6 +45,7 @@ export const FooterTitle = styled.span`
   }
 `
 export const FooterCopyright = styled.p`
+  max-width: 1200px;
   width: 100%;
   position: relative;
   display: flex;
