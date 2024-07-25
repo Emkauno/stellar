@@ -2,7 +2,7 @@ import { Modal, ModalInfo } from "@/styles/ProductsStyles"
 import parse from "html-react-parser"
 import { useClickAway } from "@uidotdev/usehooks";
 
-const ModalComponent = ({modalData, setIsModalOpen}) => {
+const ModalComponent = ({modalData, isModalOpen, setIsModalOpen}) => {
   const { 
     name,
     price,
@@ -20,12 +20,12 @@ const ModalComponent = ({modalData, setIsModalOpen}) => {
   });
 
   return (
-    <Modal ref={ref}>
+    <Modal ref={ref} className={isModalOpen ? "no-scroll" : ""}>
       <div className="close-btn" onClick={() => setIsModalOpen(false)}>
         <img src="/close.svg"/>
       </div>
       <ModalInfo>
-      <div className="img-container">
+      <div className="modal-img-container">
         <img src={image.url}/>
       </div>
       <div className="item-details">

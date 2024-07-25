@@ -75,6 +75,9 @@
   }
 }
 
+:root:has(.no-scroll){
+  overflow:hidden;
+}
 * {
   box-sizing: border-box;
   padding: 0;

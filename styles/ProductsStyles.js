@@ -190,6 +190,7 @@ export const Modal = styled.div`
     border-radius: 0;
     width: 100%;
     padding-top: 50px;
+    height: 100vh;
   }
 
   h3 {
@@ -229,19 +230,22 @@ export const ModalInfo = styled(motion.div)`
   gap: 24px;
   @media(max-width: 768px){
     flex-direction: column;
+    max-height: 100%;
   }
-  .img-container {
+  .modal-img-container {
     max-width: 400px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     img {
       width: 100%;
     }
     @media(max-width: 768px){
-      img {
-        width: 200px;
+    img {
+      height: 100%;
+      width: unset;
       }
     }
   }

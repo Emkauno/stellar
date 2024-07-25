@@ -74,6 +74,9 @@ export const ProductWindow = styled.div`
   align-items: center;
   img {
     width: 70%;
+    @media(max-width: 500px){
+    width: 100%;
+  }
   }
   @media(max-width: 768px){
     height: 150px;

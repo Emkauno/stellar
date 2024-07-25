@@ -29,6 +29,7 @@ export const FlexContainer = styled(motion.div)`
     margin-top: ${props => props.$firstSection ? "24px" : "0"};
     margin-bottom: ${props => props.$marginBottom && props.$marginBottom};
     gap: ${props => props.$gap ? props.$gap : "48px"};
+    padding: ${props => props.$noMbPadding && "0"};
   }
   .splide {
     width: 100%;

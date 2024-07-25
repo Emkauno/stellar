@@ -18,7 +18,7 @@ const Products = ({ products }) => {
       <AnimatePresence mode="wait">
         {isModalOpen && 
           <ModalContainer initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: .3}}>
-            <ModalComponent modalData={modalData} setIsModalOpen={setIsModalOpen}/>
+            <ModalComponent modalData={modalData} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
           </ModalContainer>
         }
       </AnimatePresence>
