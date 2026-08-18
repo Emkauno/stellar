@@ -10,6 +10,8 @@ import {
 import Image from "next/image";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <FooterContainer>
       <FooterContent>
@@ -21,16 +23,16 @@ const Footer = () => {
         <FooterColumn>
           <FooterInfo>
             <Image src="/email.svg" width={16} height={16} />
-            ventas@stellartienda.cl
+            ventas@stellar.cl
           </FooterInfo>
-          <FooterInfo>
+          {/* <FooterInfo>
             <Image src="/whatsapp.svg" width={15} height={15} />
             +56 9 8326 9643
-          </FooterInfo>
+          </FooterInfo> */}
         </FooterColumn>
       </FooterContent>
       <FooterCopyright>
-        Todos los derechos reservados © 2024 Stellar
+        Todos los derechos reservados © {currentYear} Stellar
       </FooterCopyright>
     </FooterContainer>
   );
